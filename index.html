@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>말씀을 소리로 새기다 — M&H</title>
+    <meta
+      name="description"
+      content="성경 66권을 소리 내어 암송하는 앱 말씀을 소리로 새기다. 개발자 M&H, 신정환."
+    />
+    <link rel="icon" href="/icon.png" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f3eee4;
+        --ink: #2c2924;
+        --muted: #6d675d;
+        --line: #e2d9cc;
+        --card: #faf7f1;
+        --green: #2f4a3c;
+        --green-2: #3e5c4b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 500px at 50% -10%, #fff 0%, transparent 55%),
+          var(--bg);
+      }
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 3.5rem 1.25rem 4rem;
+      }
+      .mark {
+        width: 4.5rem;
+        height: 4.5rem;
+        border-radius: 1.15rem;
+        display: block;
+      }
+      h1 {
+        font-family: "Noto Serif KR", "Times New Roman", serif;
+        font-weight: 600;
+        font-size: clamp(1.7rem, 5vw, 2.15rem);
+        letter-spacing: -0.03em;
+        margin: 1.25rem 0 0.4rem;
+      }
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .card {
+        margin-top: 1.75rem;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1.1rem;
+        padding: 1.15rem 1.2rem;
+      }
+      .card p { margin: 0.35rem 0; line-height: 1.7; }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.55rem 0;
+        border-top: 1px solid var(--line);
+      }
+      .row:first-child { border-top: 0; }
+      .k { color: var(--muted); font-size: 0.85rem; }
+      a { color: var(--green); }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1.5rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.75rem;
+        padding: 0 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        background: var(--green);
+        color: #f7f3ea;
+      }
+      .btn.ghost {
+        background: transparent;
+        color: var(--green-2);
+        border: 1px solid var(--line);
+      }
+      footer {
+        margin-top: 2.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img class="mark" src="/icon.png" alt="말씀을 소리로 새기다 아이콘" />
+      <h1>말씀을 소리로 새기다</h1>
+      <p class="lead">
+        성경 66권을 골라 소리 내어 암송하고, 퀴즈로 마음에 새기는 앱입니다.
+        이 페이지는 앱을 만든 M&H의 개발자 웹사이트입니다.
+      </p>
+      <div class="card">
+        <div class="row"><span class="k">앱</span><span>말씀을 소리로 새기다</span></div>
+        <div class="row"><span class="k">개발자</span><span>신정환 · M&H</span></div>
+        <div class="row">
+          <span class="k">문의</span>
+          <a href="mailto:templeofgod7@gmail.com">templeofgod7@gmail.com</a>
+        </div>
+        <div class="row"><span class="k">패키지</span><span>kr.bible.luke.memory</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=kr.bible.luke.memory">Google Play</a>
+        <a class="btn ghost" href="/privacy">개인정보처리방침</a>
+      </div>
+      <footer>© 2026 M&H</footer>
+    </main>
+  </body>
+</html>
