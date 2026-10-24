@@ -12,13 +12,14 @@
     <style>
       :root {
         color-scheme: light;
-        --bg: #f3eee4;
-        --ink: #2c2924;
-        --muted: #6d675d;
-        --line: #e2d9cc;
-        --card: #faf7f1;
-        --green: #2f4a3c;
-        --green-2: #3e5c4b;
+        /* 새로운 아이콘에 맞춘 컬러 팔레트 */
+        --bg: #f4f5f4;
+        --ink: #1b2620;
+        --muted: #5e6b63;
+        --line: #dce0dd;
+        --card: #ffffff;
+        --green: #0e3e26; /* 아이콘의 짙은 녹색 배경 */
+        --gold: #b5924e;  /* 아이콘의 금색 십자가 포인트 */
       }
       * { box-sizing: border-box; }
       body {
@@ -35,10 +36,11 @@
         padding: 3.5rem 1.25rem 4rem;
       }
       .mark {
-        width: 4.5rem;
-        height: 4.5rem;
-        border-radius: 1.15rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 1.25rem;
         display: block;
+        box-shadow: 0 4px 12px rgba(14, 62, 38, 0.15); /* 아이콘에 어울리는 은은한 그림자 추가 */
       }
       h1 {
         font-family: "Noto Serif KR", "Times New Roman", serif;
@@ -46,6 +48,7 @@
         font-size: clamp(1.7rem, 5vw, 2.15rem);
         letter-spacing: -0.03em;
         margin: 1.25rem 0 0.4rem;
+        color: var(--green); /* 제목을 테마색으로 강조 */
       }
       .lead {
         margin: 0;
@@ -58,6 +61,7 @@
         border: 1px solid var(--line);
         border-radius: 1.1rem;
         padding: 1.15rem 1.2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.02);
       }
       .card p { margin: 0.35rem 0; line-height: 1.7; }
       .row {
@@ -69,7 +73,8 @@
       }
       .row:first-child { border-top: 0; }
       .k { color: var(--muted); font-size: 0.85rem; }
-      a { color: var(--green); }
+      a { color: var(--gold); font-weight: 500; text-decoration: none; }
+      a:hover { text-decoration: underline; }
       .actions {
         display: flex;
         flex-wrap: wrap;
@@ -80,16 +85,25 @@
         display: inline-flex;
         align-items: center;
         min-height: 2.75rem;
-        padding: 0 1rem;
+        padding: 0 1.25rem;
         border-radius: 999px;
         text-decoration: none;
         background: var(--green);
-        color: #f7f3ea;
+        color: #ffffff;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+      .btn:hover {
+        background: #0a2d1c;
+        text-decoration: none;
       }
       .btn.ghost {
         background: transparent;
-        color: var(--green-2);
-        border: 1px solid var(--line);
+        color: var(--green);
+        border: 1.5px solid var(--gold);
+      }
+      .btn.ghost:hover {
+        background: rgba(181, 146, 78, 0.1);
       }
       footer {
         margin-top: 2.5rem;
@@ -107,7 +121,7 @@
         이 페이지는 앱을 만든 M&H KOG의 개발자 웹사이트입니다.
       </p>
       <div class="card">
-        <div class="row"><span class="k">앱</span><span>말씀을 소리로 새기다</span></div>
+        <div class="row"><span class="k">앱</span><span style="font-weight: 500;">말씀을 소리로 새기다</span></div>
         <div class="row"><span class="k">개발자</span><span>M&H KOG</span></div>
         <div class="row">
           <span class="k">문의</span>
@@ -117,8 +131,8 @@
       </div>
       <div class="actions">
         <a class="btn" href="https://play.google.com/store/apps/details?id=kr.bible.luke.memory">Google Play</a>
-        <a class="btn" href="/guide">사용 안내</a>
-        <a class="btn" href="/privacy">개인정보처리방침</a>
+        <a class="btn ghost" href="/guide">사용 안내</a>
+        <a class="btn ghost" href="/privacy">개인정보처리방침</a>
       </div>
       <footer>© 2026 M&H KOG</footer>
     </main>
